@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <title>fitnessForU</title>
+</head>
+<body>
+<div class="container " style="margin: 0 auto; text-align: center;">
+<div th:replace="fragments/header :: header(home)"></div>
+
+ 
+<img src="/img/fitnessimg.png">
+<div class="jumbotron mt-5" text-align:center; margin-left:20px;margin-top: 50px; style="background-color:white; color:#1C39BB">
+  <h1 class="display-4">Hello, there!</h1>
+  <p class="lead">Welcome to your neighbourhood fitness community portal! Get geared up with all our services provided for you and your family. </p>
+  
+  <hr class="my-4">
+  
+  <a class="btn btn-primary btn-lg " href="#" role="button">Sign in/up</a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="36" fill="black" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+</svg>
+</div>
+
+
+<div th:replace="fragments/header :: scripts"></div>
+
+
+</body>
+<footer class="bg-white py-4 ">
+  <div class="container ">
+    <div class="row ">
+    <div class="col-sm-3 text-left">
+       <p style="color: blue;">Located here:</p>
+       <p style="color: blue;">1350 City Centre</p>
+       <p style="color: blue;">East Side view</p>
+       <p style="color: blue;">Regina,SK</p>
+       <p style="color: blue;">S3E0T3</p>
+        
+      </div>
+      <div class="col-sm-3 text-left">
+        <a href="about"><p style="color: blue;">About us</p>
+        </div>
+      <div class="col-sm-3 float-right">
+        <h5 style="color: blue;">Follow</h5>
+        
+      </div>
+      </div>
+      
+ </div>
+</footer>
+</div>
+
+</html>
