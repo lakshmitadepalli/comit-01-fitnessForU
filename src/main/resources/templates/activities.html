@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<title>fitnessForU</title>
+</head>
+<body>
+<div class="container " style="margin: 0 auto; text-align: center;">
+<div th:replace="~{fragments/header :: header(activities)}"></div><br>
+<br><h6 style="color:#1C39BB" align-left>Home > Activity</h6><br>
+<br><h3>Activity</h3><br>
+<br><h5 style="color:#1C39BB" float-left> Enroll for the activity based on the availability and time:</h5>
+
+
+
+</body>
+<div class="jumbotron mt-5" text-align:center; margin-left:20px;margin-top: 50px; style="background-color:gradient; color:#1C39BB">
+<div class="table-responsive mt-3">
+<table class="table table-striped table-hover">
+<thead>
+<tr>
+
+<th scope="col">Activity Name</th>
+<th scope="col">Description</th>
+<th scope="col">Price</th>
+<th scope="col">Availability</th>
+
+</tr>
+</thead>
+<tbody>
+<tr th:each="activity : ${activities}">
+
+<td th:text="${activity.activityName}"></td>
+<td th:text="${activity.description}"></td>
+<td th:text="${activity.activityFee}"></td>
+<td th:text="${activity.availability}"></td>
+<td ><a href="/cart" >Add Cart</a></td>
+</tr>
+
+</tbody>
+</div>
+<div th:replace="~{fragments/header :: scripts}"></div>
+</html>

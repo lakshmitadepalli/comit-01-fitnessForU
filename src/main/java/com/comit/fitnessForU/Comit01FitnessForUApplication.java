@@ -1,7 +1,9 @@
 package com.comit.fitnessForU;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication
 public class Comit01FitnessForUApplication {

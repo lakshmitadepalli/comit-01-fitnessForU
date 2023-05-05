@@ -26,39 +26,28 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       
-      <li class="nav-item dropdown" th:classappend="${option =='activity' ? 'active': ''}">
-        <a class="nav-link dropdown-toggle" href="/activity" role="button" data-toggle="dropdown" aria-expanded="false">
-          Activity
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Swimming</a>
-          <a class="dropdown-item" href="#">Basketball</a>
-          <a class="dropdown-item" href="#">Tennis</a>
-          <a class="dropdown-item" href="#">Soccer</a>
-          <a class="dropdown-item" href="#">Adult Swim</a>
-          <a class="dropdown-item" href="#">IceHockey</a>
-          <a class="dropdown-item" href="#">Adult Soccer</a>
-          <a class="dropdown-item" href="#">Adult IceHockey</a>
+      <li class="nav-item" th:classappend="${option =='activities' ? 'active': ''}">
+        <a class="nav-link" href="/activities">Activity <span class="sr-only">(current)</span></a>
+      </li>
+          
+          <li class="nav-item" th:classappend="${option =='specialprograms' ? 'active': ''}">
+        <a class="nav-link" href="/specialprograms">Special Programs <span class="sr-only">(current)</span></a>
+      </li>
           
         </div>
       </li>
-      <li class="nav-item dropdown" th:classappend="${option =='special programs' ? 'active': ''}">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Special Programs
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Senior Walk</a>
-          <a class="dropdown-item" href="#">Marathan</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Close to Nature</a>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item"> 
+      <a class="nav-link" href="/logout">Logout</a>
+      </li>
+      </ul>
+          
         </div>
       </li>
       
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    
+    
   </div>
 </nav>
 

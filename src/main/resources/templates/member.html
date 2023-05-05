@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<title>fitnessForU</title>
+</head>
+<body>
+<div class="container " style="margin: 0 auto; text-align: center;">
+<div th:replace="fragments/header :: header(home)"></div><br>
+<br><h6 style="color:#1C39BB" float-left>Home > About Us> Member</h6>
+<div class="jumbotron mt-5" text-align:center; margin-left:20px;margin-top: 50px; style="background-color:gradient; color:#1C39BB">
+<h4 class="display-4">Become a member!</h4><br>
+<br><form action="register" method="post">
+  <div class="form-group">
+          <label for="first">First Name:</label>
+          <input type="text" class="form-control" id="first" name="first" placeholder="Type in First Name" required>
+        </div>
+        <div class="form-group">
+          <label for="last">Last Name:</label>
+          <input type="text" class="form-control" id="last" name="last" placeholder="Type in Last Name" required>
+        </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Type in Username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Type in Password" required>
+        </div>
+        <div class="form-group">
+          <label for="birth">Birth:</label>
+          <input type="date" class="form-control" id="birth" name="birth" required>
+        </div>
+        <div style="text-align: left;">
+        
+        <p>Membership fee including taxes is: $100</p> 
+        
+  <label for="payment-method" >Payment Method:</label>
+  <br>
+  <input type="radio" id="credit-card" name="payment-method" value="credit-card">
+  <label for="credit-card">Credit Card</label>
+  <br>
+  <input type="radio" id="debit-card" name="payment-method" value="debit-card">
+  <label for="debit-card">Debit Card</label>
+  <br>
+  <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer">
+  <label for="bank-transfer">Bank Transfer</label>
+</div>
+
+        
+        <button type="submit" class="btn btn-primary mt-2" style="min-width: 100px">Register</button>
+</form>
+
+
+
+
+</div>
+<div th:replace="fragments/header :: scripts"></div>
+
+</body>
+</html>
