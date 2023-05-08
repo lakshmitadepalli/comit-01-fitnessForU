@@ -10,15 +10,12 @@ import com.comit.fitnessForU.bean.UserBean;
 public class CustomUserDetails implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
-    UserBean user;
-    
-    
-    
-    
-	public CustomUserDetails(UserBean user) {
-		super();
-		this.user = user;
-	}
+UserBean user;
+
+   public CustomUserDetails(UserBean user) {
+	super();
+	this.user = user;
+}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

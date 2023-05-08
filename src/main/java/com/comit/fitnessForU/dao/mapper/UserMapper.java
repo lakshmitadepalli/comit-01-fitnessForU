@@ -15,6 +15,7 @@ public class UserMapper implements RowMapper<UserBean> {
 		user.setUserId(rs.getInt("USER_ID"));
 		user.setUserFname(rs.getString("USER_FNAME"));
 		user.setUserLname(rs.getString("USER_LNAME"));
+		user.setUsername(rs.getString("USERNAME"));
 		user.setPassword(rs.getString("PASSWORD"));
 		user.setBirth(rs.getDate("DATEOFBIRTH"));
 	    user.setStatus(rs.getString("STATUS"));

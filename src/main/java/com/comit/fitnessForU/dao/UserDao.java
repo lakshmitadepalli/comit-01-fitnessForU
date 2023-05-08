@@ -1,6 +1,6 @@
 package com.comit.fitnessForU.dao;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,12 @@ public class UserDao {
 	List<UserBean> users;
 	@Autowired
 	JdbcTemplate jdbcTemplate;
-	
+     public List<UserBean> listUsers() {
+		
+		String sql = "SELECT * FROM USER";
+		
+		return this.jdbcTemplate.query(sql, new UserMapper());
+	}
 	
 	public void joinUser(UserBean user) {
 		String sql="INSERT INTO USER(USERNAME,PASSWORD,USER_FNAME,USER_LNAME,DATEOFBIRTH,STATUS,TERMS_ACCEPTANCE)"+"VALUES(?,?,?,?,?,?,?)";

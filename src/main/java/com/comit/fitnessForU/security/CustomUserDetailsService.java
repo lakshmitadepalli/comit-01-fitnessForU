@@ -10,14 +10,16 @@ import com.comit.fitnessForU.bean.UserBean;
 import com.comit.fitnessForU.dao.UserDao;
 @Service("UserDetailsService")
 public class CustomUserDetailsService implements UserDetailsService {
-   @Autowired
+	@Autowired
 	UserDao userDao;
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		UserBean user=userDao.findByUsername(username);
+		UserBean user = this.userDao.findByUsername(username);
 		if(user==null) {
 			throw new UsernameNotFoundException("User not found:" + username);
 		}
+		
 		return new CustomUserDetails(user);
 	}
 

@@ -5,7 +5,7 @@ import java.util.Date;
 public class UserBean {
    int userId;
    String userFname;
-   String UserLname;
+   String userLname;
    String username;
    String password;
    Date birth;
@@ -13,9 +13,18 @@ public class UserBean {
    String termsAcceptance;
    
    
-  public UserBean() {
+  
+
+
+
+
+public UserBean() {
 	
 }
+
+
+
+
 
 
 public UserBean(int userId, String userFname, String userLname, String username, String password, Date birth,
@@ -23,13 +32,17 @@ public UserBean(int userId, String userFname, String userLname, String username,
 	super();
 	this.userId = userId;
 	this.userFname = userFname;
-	UserLname = userLname;
+	this.userLname = userLname;
 	this.username = username;
 	this.password = password;
 	this.birth = birth;
 	this.status = status;
 	this.termsAcceptance = termsAcceptance;
 }
+
+
+
+
 
 
 public int getUserId() {
@@ -37,9 +50,13 @@ public int getUserId() {
 }
 
 
+
+
 public void setUserId(int userId) {
 	this.userId = userId;
 }
+
+
 
 
 public String getUserFname() {
@@ -47,19 +64,27 @@ public String getUserFname() {
 }
 
 
+
+
 public void setUserFname(String userFname) {
 	this.userFname = userFname;
 }
 
 
+
+
 public String getUserLname() {
-	return UserLname;
+	return userLname;
 }
+
+
 
 
 public void setUserLname(String userLname) {
-	UserLname = userLname;
+	this.userLname = userLname;
 }
+
+
 
 
 public String getUsername() {
@@ -67,9 +92,13 @@ public String getUsername() {
 }
 
 
+
+
 public void setUsername(String username) {
 	this.username = username;
 }
+
+
 
 
 public String getPassword() {
@@ -77,9 +106,13 @@ public String getPassword() {
 }
 
 
+
+
 public void setPassword(String password) {
 	this.password = password;
 }
+
+
 
 
 public Date getBirth() {
@@ -87,9 +120,13 @@ public Date getBirth() {
 }
 
 
+
+
 public void setBirth(Date birth) {
 	this.birth = birth;
 }
+
+
 
 
 public String getStatus() {
@@ -97,9 +134,13 @@ public String getStatus() {
 }
 
 
+
+
 public void setStatus(String status) {
 	this.status = status;
 }
+
+
 
 
 public String getTermsAcceptance() {
@@ -107,19 +148,26 @@ public String getTermsAcceptance() {
 }
 
 
+
+
 public void setTermsAcceptance(String termsAcceptance) {
 	this.termsAcceptance = termsAcceptance;
 }
 
 
+
+
 @Override
 public String toString() {
-	return "UserBean [userId=" + userId + ", userFname=" + userFname + ", UserLname=" + UserLname + ", username="
+	return "UserBean [userId=" + userId + ", userFname=" + userFname + ", userLname=" + userLname + ", username="
 			+ username + ", password=" + password + ", birth=" + birth + ", status=" + status + ", termsAcceptance="
 			+ termsAcceptance + "]";
 }
-  
-  
+
+
+
+
+
   
   
   
